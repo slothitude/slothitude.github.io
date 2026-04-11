@@ -64,7 +64,8 @@
       "SnapshotSystem for state persistence and recovery",
       "Watchdog self-healing with bridge monitoring",
       "Shell modes: fullscreen, hard, soft (windowed)",
-      "10 CommandBus dispatch targets + 3 AI tools"
+      "10 CommandBus dispatch targets + 3 AI tools",
+      "Startup sound on boot"
     ],
     "screenshot": "assets/images/godotos.png",
     "storeLinks": {
