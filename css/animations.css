@@ -1,0 +1,200 @@
+/* ============================================
+   SlothitudeGames Portfolio — Scroll-Reveal Animations
+   Intersection Observer classes: .reveal / .reveal.active
+   ============================================ */
+
+/* ---- Base reveal state: elements hidden before intersection ---- */
+.reveal {
+    opacity: 0;
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+/* ---- Active state: elements visible after intersection ---- */
+.reveal.active {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* ---- Directional variants ---- */
+
+/* Fade up (default) */
+.reveal-up {
+    transform: translateY(40px);
+}
+
+.reveal-up.active {
+    transform: translateY(0);
+}
+
+/* Fade down */
+.reveal-down {
+    transform: translateY(-40px);
+}
+
+.reveal-down.active {
+    transform: translateY(0);
+}
+
+/* Fade from left */
+.reveal-left {
+    transform: translateX(-40px);
+}
+
+.reveal-left.active {
+    transform: translateX(0);
+}
+
+/* Fade from right */
+.reveal-right {
+    transform: translateX(40px);
+}
+
+.reveal-right.active {
+    transform: translateX(0);
+}
+
+/* Fade in (no direction) */
+.reveal-fade {
+    transform: none;
+}
+
+.reveal-fade.active {
+    transform: none;
+}
+
+/* Scale up */
+.reveal-scale {
+    transform: scale(0.9);
+}
+
+.reveal-scale.active {
+    transform: scale(1);
+}
+
+/* ---- Staggered delays via data-delay attribute ---- */
+.reveal[data-delay="50"]   { transition-delay: 50ms; }
+.reveal[data-delay="100"]  { transition-delay: 100ms; }
+.reveal[data-delay="150"]  { transition-delay: 150ms; }
+.reveal[data-delay="200"]  { transition-delay: 200ms; }
+.reveal[data-delay="250"]  { transition-delay: 250ms; }
+.reveal[data-delay="300"]  { transition-delay: 300ms; }
+.reveal[data-delay="350"]  { transition-delay: 350ms; }
+.reveal[data-delay="400"]  { transition-delay: 400ms; }
+.reveal[data-delay="450"]  { transition-delay: 450ms; }
+.reveal[data-delay="500"]  { transition-delay: 500ms; }
+.reveal[data-delay="550"]  { transition-delay: 550ms; }
+.reveal[data-delay="600"]  { transition-delay: 600ms; }
+
+/* ---- Reduced motion preference ---- */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .reveal-up,
+    .reveal-down,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        transform: none;
+    }
+}
+
+/* ---- Loading screen animation ---- */
+.loader-bar-fill {
+    animation: loaderProgress 1.5s ease-out forwards;
+}
+
+@keyframes loaderProgress {
+    0%   { width: 0%; }
+    50%  { width: 70%; }
+    100% { width: 100%; }
+}
+
+/* ---- Hero background subtle pulse ---- */
+.hero-bg {
+    animation: heroPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroPulse {
+    0%   { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* ---- Floating particle animation ---- */
+.particle {
+    animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0);
+    }
+    10% {
+        opacity: 0.6;
+        transform: translateY(-10vh) scale(1);
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100vh) scale(0.5);
+    }
+}
+
+/* ---- Counter animation pulse ---- */
+.stat-number.counting {
+    animation: countPulse 0.1s ease;
+}
+
+@keyframes countPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* ---- Nav link underline grow ---- */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 20px;
+    height: 2px;
+    background: var(--accent-primary);
+    border-radius: 1px;
+    transition: transform 0.3s ease;
+}
+
+.nav-link.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* ---- Project card tilt shine effect ---- */
+.project-card-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.03) 45%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0.03) 55%,
+        transparent 60%
+    );
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.project-card:hover .project-card-inner::before {
+    opacity: 1;
+}

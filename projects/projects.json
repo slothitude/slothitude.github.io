@@ -1,0 +1,141 @@
+[
+  {
+    "id": "redclaw",
+    "title": "RedClaw",
+    "tagline": "The self-learning AI agent that kills drudgery dead.",
+    "genre": "AI Agent",
+    "status": "Active",
+    "description": "A self-learning AI coding agent with subagent bloodlines, DNA evolution, and dream synthesis. Provider-agnostic across 8+ LLM services with 6 interfaces including CLI, web, Telegram, and Godot. Achieves 41% on SWE-bench using free models.",
+    "features": [
+      "8+ LLM providers (OpenAI, Anthropic, Ollama, Groq, DeepSeek, OpenRouter, ZAI)",
+      "Subagent bloodlines with inherited wisdom",
+      "DNA evolution across generations",
+      "Dream cycle for pattern synthesis",
+      "6 interfaces: CLI, Web, Telegram, Godot, Dashboard, AGI",
+      "14 built-in tools + MCP client",
+      "SOUL constitution + Karma scoring"
+    ],
+    "screenshot": "assets/images/redclaw.jpg",
+    "storeLinks": {
+      "github": "https://github.com/slothitude/RedClaw"
+    },
+    "tags": ["ai-agent", "coding-assistant", "self-learning", "multi-provider", "mcp"],
+    "color": "#e74c3c"
+  },
+  {
+    "id": "godotcode",
+    "title": "GodotCode",
+    "tagline": "AI coding assistant inside the Godot editor.",
+    "genre": "Dev Tool",
+    "status": "Active",
+    "description": "AI assistant editor plugin for Godot 4.6. Chat with Claude directly inside the Godot editor. Stream responses, inspect the scene tree, take screenshots, run shell commands, generate images, manage tasks, and more — all without leaving your workflow.",
+    "features": [
+      "Streaming chat with Claude API",
+      "Live editor tools: scene tree, node properties, screenshots",
+      "Code search (glob/grep) and shell execution",
+      "Web tools and image generation (NVIDIA NIM Flux)",
+      "Sub-agents and task management",
+      "Scheduled prompts and slash commands",
+      "Permission system and cost tracking",
+      "Dark/light themes"
+    ],
+    "screenshot": "assets/images/godotcode.png",
+    "storeLinks": {
+      "github": "https://github.com/slothitude/godotcode"
+    },
+    "tags": ["godot", "editor-plugin", "ai-assistant", "developer-tools", "claude"],
+    "color": "#478cbf"
+  },
+  {
+    "id": "godotos",
+    "title": "GodotOS",
+    "tagline": "AI-native graphical shell built in Godot Engine.",
+    "genre": "Desktop Shell",
+    "status": "In Development",
+    "description": "Transforms GodotCode into a standalone Linux graphical shell — a fullscreen operating environment controlled by an AI agent at its core. Features a CommandBus architecture, floating window manager, and Python bridge for system services.",
+    "features": [
+      "Fullscreen desktop environment in Godot 4.6",
+      "AI agent at the core of the shell",
+      "CommandBus architecture for all operations",
+      "Python bridge server (FS, Process, System, Network)",
+      "Floating window manager",
+      "Built-in terminal and task manager",
+      "Wayland/X11 session registration"
+    ],
+    "screenshot": "assets/images/godotos.png",
+    "storeLinks": {
+      "github": "https://github.com/slothitude/GodotOS"
+    },
+    "tags": ["os-shell", "godot", "ai-native", "linux", "wayland"],
+    "color": "#8b5cf6"
+  },
+  {
+    "id": "slothflix",
+    "title": "SlothFlix",
+    "tagline": "Dockerized torrent streaming with Netflix-style UI.",
+    "genre": "Media Server",
+    "status": "Released",
+    "description": "Dockerized torrent streaming app with a Netflix-style web UI. VPN-routed, sequential torrent streaming with an embedded HTML5 video player. Search, stream, and watch — no manual downloads needed.",
+    "features": [
+      "Netflix-style web interface",
+      "Sequential torrent streaming",
+      "Embedded HTML5 video player",
+      "VPN-routed for privacy",
+      "Dockerized deployment",
+      "Automatic poster fetching",
+      "Search and browse catalog"
+    ],
+    "screenshot": "assets/images/slothflix.png",
+    "storeLinks": {
+      "github": "https://github.com/slothitude/slothflix"
+    },
+    "tags": ["streaming", "docker", "self-hosted", "media-server", "python"],
+    "color": "#e50914"
+  },
+  {
+    "id": "living-diary",
+    "title": "Living Diary",
+    "tagline": "A gentle PWA companion with battles and AI-generated art.",
+    "genre": "PWA Game",
+    "status": "In Development",
+    "description": "A gentle, empathetic companion PWA with an interactive creature that evolves through 5 stages. Features automatic battles, dungeon crawling across 5 biomes with 45 zones, AI-generated art, crafting, skill trees, and seasonal events.",
+    "features": [
+      "Interactive creature companion with 5-stage evolution",
+      "AI-generated creature art (Pixazo API)",
+      "Fully automatic battle system with animations and SFX",
+      "5 biomes, 45 zones for dungeon crawling",
+      "Crafting, inventory, and skill trees",
+      "Seasonal events and calendar",
+      "Offline-first PWA with IndexedDB",
+      "React 18 + TypeScript + TailwindCSS"
+    ],
+    "screenshot": "assets/images/living-diary.png",
+    "storeLinks": {
+      "github": "https://github.com/slothitude/living-diary-pwa"
+    },
+    "tags": ["pwa", "rpg", "ai-art", "companion", "react", "typescript"],
+    "color": "#10b981"
+  },
+  {
+    "id": "helioai",
+    "title": "HelioAi",
+    "tagline": "Solar-powered home inference stack.",
+    "genre": "Infrastructure",
+    "status": "Active",
+    "description": "A home inference stack running on an RTX 3060, controlled remotely via SSH. Two GPU-exclusive services share the hardware: text generation (llama.cpp) and image generation (ComfyUI with FLUX). Includes GPU swap scripts, deployment, and workflow JSONs.",
+    "features": [
+      "llama.cpp text generation (Llama 3.1 8B)",
+      "ComfyUI image generation (FLUX.1 models)",
+      "GPU swap scripts for shared hardware",
+      "Remote SSH deployment",
+      "Deployment scripts and workflow JSONs",
+      "Solar-powered infrastructure"
+    ],
+    "screenshot": "assets/images/helioai.png",
+    "storeLinks": {
+      "github": "https://github.com/slothitude/HelioAi"
+    },
+    "tags": ["ai-infra", "llm", "image-generation", "comfyui", "self-hosted"],
+    "color": "#f59e0b"
+  }
+]

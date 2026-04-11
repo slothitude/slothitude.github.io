@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Slothitude Games Portfolio — Responsive Breakpoints
+   Mobile-first · No frameworks
+   ========================================================================== */
+
+/*
+  Breakpoint reference (min-width):
+    phone:    default (< 640px)
+    tablet:   640px
+    desktop:  1024px
+    wide:     1280px
+*/
+
+/* --------------------------------------------------------------------------
+   Base — Phone (< 640px)
+   -------------------------------------------------------------------------- */
+
+/* Navigation collapses to hamburger */
+.nav__toggle {
+  display: block;
+}
+
+.nav__links {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding: var(--space-4) var(--space-6);
+  gap: var(--space-2);
+}
+
+.nav__links.open {
+  display: flex;
+}
+
+.nav__link {
+  padding: var(--space-3) 0;
+}
+
+/* Hero scales down */
+.hero {
+  padding: var(--space-16) var(--space-4);
+  min-height: 50vh;
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+
+.hero__subtitle {
+  font-size: var(--text-base);
+}
+
+/* Cards stack full-width */
+.card-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Section padding tightens */
+.section {
+  padding-block: var(--space-12);
+}
+
+.section__header {
+  margin-bottom: var(--space-8);
+}
+
+/* Footer stacks */
+.footer__inner {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Utility overrides */
+.hidden-mobile {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Tablet — 640px+
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) {
+  /* Nav still hamburger but wider layout */
+  .nav__links.open {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-6);
+    padding: var(--space-4);
+  }
+
+  /* Hero scales up */
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-3xl); }
+
+  .hero {
+    padding: var(--space-20) var(--space-6);
+    min-height: 55vh;
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-lg);
+  }
+
+  /* Cards 2-column */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Layout gets sidebar */
+  .layout {
+    grid-template-columns: 1fr 280px;
+  }
+
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Desktop — 1024px+
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  /* Full nav always visible */
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  /* Hero at full size */
+  h1 { font-size: var(--text-5xl); }
+  h2 { font-size: var(--text-4xl); }
+
+  .hero {
+    padding: var(--space-24) var(--space-6);
+    min-height: 60vh;
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-xl);
+  }
+
+  /* Cards up to 3 columns */
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
+
+  /* Full section spacing */
+  .section {
+    padding-block: var(--section-gap);
+  }
+
+  .section__header {
+    margin-bottom: var(--space-12);
+  }
+
+  /* Footer side-by-side */
+  .footer__inner {
+    flex-direction: row;
+  }
+
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Wide — 1280px+
+   -------------------------------------------------------------------------- */
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: var(--space-8);
+  }
+
+  .layout {
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-10);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Print
+   -------------------------------------------------------------------------- */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .nav,
+  .footer,
+  .btn,
+  .hero::before {
+    display: none;
+  }
+
+  .card {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #666;
+  }
+}

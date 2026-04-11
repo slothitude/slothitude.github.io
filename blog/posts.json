@@ -1,0 +1,26 @@
+[
+  {
+    "id": "redclaw-41-swebench",
+    "title": "RedClaw hits 41% on SWE-bench using free models",
+    "date": "2026-03-28",
+    "excerpt": "We got RedClaw to solve 41% of SWE-bench problems using GLM-5.1 — a free model. Here's how subagent bloodlines and DNA evolution made it happen.",
+    "tags": ["ai", "redclaw", "benchmark"],
+    "content": "## The Challenge\n\nSWE-bench is the gold standard for evaluating coding agents. Most top performers use expensive models like Claude or GPT-4. We wanted to see what was possible with free models.\n\n## How We Did It\n\nThe key was **subagent bloodlines**. Instead of one agent trying everything, RedClaw spawns subagents that inherit wisdom from previous runs. Each generation gets smarter.\n\nThe **DNA evolution** system means successful strategies propagate. Failed ones die off. After a few generations, the agents have learned which approaches work for which types of problems.\n\n## The Results\n\n- **41% solve rate** on SWE-bench Lite\n- **Zero cost** — running entirely on free GLM-5.1\n- **Sub-5 minute** average solve time\n\n## What's Next\n\nWe're pushing for 50% with improved dream synthesis — letting agents sleep on hard problems and wake up with new approaches. The dream cycle synthesizes patterns from thousands of previous attempts.\n\nStay slothful."
+  },
+  {
+    "id": "godotcode-release",
+    "title": "GodotCode: Claude inside your game editor",
+    "date": "2026-02-15",
+    "excerpt": "We built an AI assistant that lives inside the Godot editor. Scene tree inspection, live screenshots, shell commands, image generation — all from a chat window.",
+    "tags": ["godot", "godotcode", "tools"],
+    "content": "## Why\n\nContext switching kills flow. Every time you leave your editor to ask an AI a question, you lose momentum. GodotCode brings the AI to where you already are.\n\n## What It Does\n\nGodotCode is a Godot 4.6 editor plugin that gives you a full Claude-powered AI assistant inside the editor. But it's not just chat — it has **tools**.\n\n### Live Editor Tools\n\n- **Scene tree inspection** — ask the AI to find nodes, check properties, debug signal connections\n- **Screenshots** — the AI can take screenshots of your game to understand visual issues\n- **Node property editing** — modify any property directly from the chat\n\n### Code Intelligence\n\n- **Glob/Grep search** across your entire project\n- **Shell execution** for build steps, testing, git operations\n- **File read/write** with full project awareness\n\n### Creative Tools\n\n- **Image generation** via NVIDIA NIM (Flux) — generate textures and sprites in-chat\n- **Web tools** for documentation lookup\n\n## The Architecture\n\nThe plugin runs as a GDScript panel that communicates with Claude via the Anthropic API. Tool calls are mapped to editor actions through a permission system that keeps you in control.\n\n## Try It\n\nGrab it from the [GitHub repo](https://github.com/slothitude/godotcode) and drop it in your addons folder."
+  },
+  {
+    "id": "slothflix-docker",
+    "title": "Building SlothFlix: Netflix-style streaming from torrents",
+    "date": "2026-01-20",
+    "excerpt": "How we built a self-hosted streaming platform with sequential torrent downloading, embedded video playback, and a Netflix-inspired UI — all in Docker.",
+    "tags": ["slothflix", "docker", "streaming"],
+    "content": "## The Problem\n\nWe wanted the Netflix experience without the subscription. Stream what you want, when you want, without waiting for full downloads.\n\n## The Solution\n\nSlothFlix streams torrents **sequentially** — you start watching before the file finishes downloading. It's like having a personal streaming server.\n\n## Architecture\n\n```\nSlothFlix Stack:\n├── Web UI (Netflix-style, responsive)\n├── Sequential torrent client (libtorrent)\n├── HTML5 video player (streaming-friendly)\n├── VPN container (all traffic routed through it)\n└── Docker Compose (one-command deploy)\n```\n\n## Key Features\n\n### Sequential Streaming\n\nThe torrent client prioritizes pieces in order. Within seconds, the video player has enough data to start playback. No more waiting for the last 1%.\n\n### VPN Protection\n\nAll traffic routes through a VPN container. Your ISP sees encrypted traffic, nothing else.\n\n### Automatic Posters\n\nThe UI fetches movie posters and metadata automatically. Browse your library like a real streaming service.\n\n## Deploy It\n\n```bash\ndocker compose up -d\n```\n\nThat's it. One command and you're streaming."
+  }
+]
