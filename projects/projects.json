@@ -51,22 +51,26 @@
     "title": "GodotOS",
     "tagline": "AI-native graphical shell built in Godot Engine.",
     "genre": "Desktop Shell",
-    "status": "In Development",
-    "description": "Transforms GodotCode into a standalone Linux graphical shell — a fullscreen operating environment controlled by an AI agent at its core. Features a CommandBus architecture, floating window manager, and Python bridge for system services.",
+    "status": "v1.0.0",
+    "description": "A full desktop environment built inside Godot 4.6, controlled by an AI agent at its core. Features a floating window manager with minimize/maximize, app launcher overlay, built-in terminal, file explorer, task manager, and settings. Cross-platform Python bridge handles all system operations on both Linux and Windows.",
     "features": [
-      "Fullscreen desktop environment in Godot 4.6",
-      "AI agent at the core of the shell",
-      "CommandBus architecture for all operations",
-      "Python bridge server (FS, Process, System, Network)",
-      "Floating window manager",
-      "Built-in terminal and task manager",
-      "Wayland/X11 session registration"
+      "EventRouter pub/sub system with string channels",
+      "VirtualFS with cross-platform path mapping",
+      "App Launcher with JSON manifest discovery",
+      "Built-in Terminal, File Explorer, Task Manager, Settings",
+      "Floating window manager with minimize/maximize/restore",
+      "App launcher overlay (Super+Space) with search",
+      "Cross-platform Python bridge (Linux + Windows)",
+      "SnapshotSystem for state persistence and recovery",
+      "Watchdog self-healing with bridge monitoring",
+      "Shell modes: fullscreen, hard, soft (windowed)",
+      "10 CommandBus dispatch targets + 3 AI tools"
     ],
     "screenshot": "assets/images/godotos.png",
     "storeLinks": {
       "github": "https://github.com/slothitude/GodotOS"
     },
-    "tags": ["os-shell", "godot", "ai-native", "linux", "wayland"],
+    "tags": ["os-shell", "godot", "ai-native", "linux", "wayland", "windows"],
     "color": "#8b5cf6"
   },
   {
